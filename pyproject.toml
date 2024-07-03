@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "aiokafka_manager_service"
+version = "0.0.1"
+description = "aiokafka manager service for Centralita App"
+authors = ["Dsalme <dsalme@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.10.14"
+aiokafka = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+pytest-mock = "*"
+pytest-cov = "*"
+pytest-docker = "*"
+flake8 = "*"
+requests = "*"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
