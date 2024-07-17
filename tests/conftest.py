@@ -16,7 +16,7 @@ from aiokafka_manager_service.services.kafka_service import KafkaService
 #     BasicAuth,
 # )
 import requests
-from aiohttp.client_exceptions import WSServerHandshakeError
+#from aiohttp.client_exceptions import WSServerHandshakeError
 
 
 
@@ -31,7 +31,7 @@ from aiohttp.client_exceptions import WSServerHandshakeError
 @pytest.fixture
 def kafka_service():
     kafka_server = "broker"
-    kafka_port = 29092
+    kafka_port = "29092"
     kafka_service = KafkaService(server=kafka_server, port=kafka_port)
 
     yield kafka_service

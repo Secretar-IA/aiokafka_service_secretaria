@@ -39,17 +39,17 @@ class KafkaProducer:
                 f"[KafkaProducer] Kafka may not be yet available with error: {error}, retrying in 10s"
             )
             await asyncio.sleep(10)
-            return await self.connect_kafka()
+            raise KafkaConnectionError
         except KafkaError as error:
             logger.error(
                 f"[KafkaProducer] Kafka may not be yet available with error: {error}, retrying in 10s"
             )
             await asyncio.sleep(10)
-            return await self.connect_kafka()
+            raise KafkaError
         except Exception as error:
             print(f"[KafkaProducer] Unknown exception: {error}, retrying in 10s")
             await asyncio.sleep(10)
-            return await self.connect_kafka()
+            raise Exception
         else:
             logger.info(
                 f"[KafkaProducer] connected to kafka producer with topic {self._topic}"
