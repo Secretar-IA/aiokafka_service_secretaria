@@ -13,7 +13,7 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry lock
 RUN poetry install --no-root
 
-COPY ./aiokafka_manager_service ./aiokafka_manager_service
+COPY ./aiokafka_service_secretaria ./aiokafka_service_secretaria
 COPY ./tests ./tests
 
 ENV PYTHONPATH=/src

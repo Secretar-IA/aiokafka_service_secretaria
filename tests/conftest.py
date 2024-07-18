@@ -2,9 +2,9 @@ import pytest
 import asyncio
 
 import pytest_asyncio
-# from aiokafka_manager_service.kafka_consumer import KafkaConsumer
-# from aiokafka_manager_service.kafka_producer import KafkaProducer
-from aiokafka_manager_service.services.kafka_service import KafkaService
+# from aiokafka_service_secretaria.kafka_consumer import KafkaConsumer
+# from aiokafka_service_secretaria.kafka_producer import KafkaProducer
+from aiokafka_service_secretaria.services.kafka_service import KafkaService
 
 # from aiohttp import (
 #     ClientConnectorError,

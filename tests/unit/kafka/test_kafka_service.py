@@ -3,19 +3,19 @@ import pytest
 import asyncio
 import pytest_asyncio
 from unittest.mock import AsyncMock, patch
-from aiokafka_manager_service.services.kafka_service import KafkaService
+from aiokafka_service_secretaria.services.kafka_service import KafkaService
 from unittest.mock import MagicMock
 from pytest_mock import MockerFixture
 
-from aiokafka_manager_service.kafka_producer import KafkaProducer
-from aiokafka_manager_service.kafka_consumer import KafkaConsumer
+from aiokafka_service_secretaria.kafka_producer import KafkaProducer
+from aiokafka_service_secretaria.kafka_consumer import KafkaConsumer
 
 
 @pytest_asyncio.fixture()
 def mock__start_kafka_producers(mocker: MockerFixture):
     async_mock = AsyncMock()
     mocker.patch(
-        "aiokafka_manager_service.services.kafka_service.KafkaService._start_kafka_producers",
+        "aiokafka_service_secretaria.services.kafka_service.KafkaService._start_kafka_producers",
         side_effect=async_mock,
     )
     return async_mock
@@ -25,7 +25,7 @@ def mock__start_kafka_producers(mocker: MockerFixture):
 def mock__start_kafka_consumers(mocker: MockerFixture):
     async_mock = AsyncMock()
     mocker.patch(
-        "aiokafka_manager_service.services.kafka_service.KafkaService._start_kafka_consumers",
+        "aiokafka_service_secretaria.services.kafka_service.KafkaService._start_kafka_consumers",
         side_effect=async_mock,
     )
     return async_mock
@@ -35,7 +35,7 @@ def mock__start_kafka_consumers(mocker: MockerFixture):
 def mock_kafka_producer_send(mocker: MockerFixture):
     async_mock = AsyncMock()
     mocker.patch(
-        "aiokafka_manager_service.services.kafka_service.KafkaProducer.send", side_effect=async_mock
+        "aiokafka_service_secretaria.services.kafka_service.KafkaProducer.send", side_effect=async_mock
     )
     return async_mock
 
@@ -44,7 +44,7 @@ def mock_kafka_producer_send(mocker: MockerFixture):
 def mock_kafka_consumer_consume(mocker: MockerFixture):
     return_value = MagicMock()
     return mocker.patch(
-        "aiokafka_manager_service.services.kafka_service.KafkaConsumer.consume",
+        "aiokafka_service_secretaria.services.kafka_service.KafkaConsumer.consume",
         return_value=return_value,
     )
 

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "aiokafka_manager_service"
+name = "aiokafka_service_secretaria"
 version = "0.0.1"
 description = "aiokafka manager service for Centralita App"
 authors = ["Dsalme <dsalme@gmail.com>"]
