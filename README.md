@@ -1,2 +1,2 @@
-# aiokafka_manager_service
-aiokafka manager service for kafka producer/consumer connections using aiokafka and asyncio
+# aiokafka_service_secretaria
+aiokafka manager service for SecretarIA for kafka producer/consumer connections using aiokafka and asyncio

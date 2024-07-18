@@ -2,8 +2,8 @@ import asyncio
 import logging
 from typing import Dict, Any, List
 
-from aiokafka_manager_service.kafka_consumer import KafkaConsumer
-from aiokafka_manager_service.kafka_producer import KafkaProducer
+from aiokafka_service_secretaria.kafka_consumer import KafkaConsumer
+from aiokafka_service_secretaria.kafka_producer import KafkaProducer
 
 logger = logging.getLogger(__name__)
 
