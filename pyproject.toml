@@ -3,20 +3,26 @@ name = "aiokafka_service_secretaria"
 version = "0.0.1"
 description = "aiokafka manager service for Centralita App"
 authors = ["Dsalme <dsalme@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "aiokafka_service_secretaria"}]
 
 [tool.poetry.dependencies]
 python = "3.10.14"
-aiokafka = "*"
+aiokafka = "0.11.0"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "*"
-pytest-asyncio = "*"
-pytest-mock = "*"
-pytest-cov = "*"
-pytest-docker = "*"
-flake8 = "*"
-requests = "*"
+pytest = "8.2.2"
+pytest-asyncio = "0.23.8"
+pytest-mock = "3.14.0"
+pytest-cov = "5.0.0"
+pytest-docker = "3.1.1"
+flake8 = "7.1.0"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
